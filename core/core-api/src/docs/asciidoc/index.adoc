@@ -1,0 +1,36 @@
+= API Docs
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 3
+:sectlinks:
+:snippets: build/generated-snippets
+
+== Introduce
+
+This is the Core API documentation.
+
+== Example API
+
+=== Example GET API
+==== Curl Request
+include::{snippets}/board-get-one/curl-request.adoc[]
+==== Path Parameters
+include::{snippets}/board-get-one/path-parameters.adoc[]
+==== Http Response
+include::{snippets}/board-get-one/http-response.adoc[]
+==== Response Fields
+include::{snippets}/board-get-one/response-fields.adoc[]
+
+'''
+
+=== Example POST API
+// ==== Curl Request
+// include::{snippets}/examplePost/curl-request.adoc[]
+// ==== Request Fields
+// include::{snippets}/examplePost/request-fields.adoc[]
+// ==== Http Response
+// include::{snippets}/examplePost/http-response.adoc[]
+// ==== Response Fields
+// include::{snippets}/examplePost/response-fields.adoc[]
