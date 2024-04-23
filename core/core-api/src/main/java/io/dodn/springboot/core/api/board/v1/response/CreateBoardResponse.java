@@ -6,29 +6,35 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Getter
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class BoardResponseDto {
+import java.time.LocalDateTime;
 
+@Getter
+public class CreateBoardResponse {
     private Long id;
     private String title;
     private String content;
     private Long userId;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     @Builder(access = AccessLevel.PRIVATE)
-    public BoardResponseDto(Long id, String title, String content, Long userId) {
+    public CreateBoardResponse(Long id, String title, String content, Long userId, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.userId = userId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public static BoardResponseDto from(Board board) {
-        return BoardResponseDto.builder()
+    public static CreateBoardResponse from(Board board) {
+        return CreateBoardResponse.builder()
                 .id(board.getId())
                 .title(board.getTitle())
                 .content(board.getContent())
                 .userId(board.getUserId())
+                .createdAt(board.getCreatedAt())
+                .updatedAt(board.getUpdatedAt())
                 .build();
     }
 }

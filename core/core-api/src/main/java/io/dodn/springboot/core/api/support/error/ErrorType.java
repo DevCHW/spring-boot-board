@@ -5,8 +5,9 @@ import org.springframework.http.HttpStatus;
 
 public enum ErrorType {
 
-    DEFAULT_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, ErrorCode.E500, "An unexpected error has occurred.",
-            LogLevel.ERROR);
+    VALID_ERROR(HttpStatus.BAD_REQUEST, ErrorCode.E500, "Bad request", LogLevel.WARN),
+    DEFAULT_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, ErrorCode.E500, "An unexpected error has occurred.", LogLevel.ERROR),
+    BAD_REQUEST(HttpStatus.BAD_REQUEST, ErrorCode.E500, "Bad request", LogLevel.WARN);
 
     private final HttpStatus status;
 

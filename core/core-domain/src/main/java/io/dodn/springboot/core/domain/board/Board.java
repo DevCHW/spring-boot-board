@@ -2,6 +2,9 @@ package io.dodn.springboot.core.domain.board;
 
 import lombok.Builder;
 import lombok.Getter;
+import org.springframework.cglib.core.Local;
+
+import java.time.LocalDateTime;
 
 @Getter
 public class Board {
@@ -10,13 +13,17 @@ public class Board {
     private final String title;
     private final String content;
     private final Long userId;
+    private final LocalDateTime createdAt;
+    private final LocalDateTime updatedAt;
 
     @Builder
-    public Board(Long id, String title, String content, Long userId) {
+    public Board(Long id, String title, String content, Long userId, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.userId = userId;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
 }

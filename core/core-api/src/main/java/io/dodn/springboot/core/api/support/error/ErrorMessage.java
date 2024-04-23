@@ -20,6 +20,12 @@ public class ErrorMessage {
         this.data = data;
     }
 
+    public ErrorMessage(ErrorType errorType, String message) {
+        this.code = errorType.getCode().name();
+        this.message = message;
+        this.data = null;
+    }
+
     public String getCode() {
         return code;
     }

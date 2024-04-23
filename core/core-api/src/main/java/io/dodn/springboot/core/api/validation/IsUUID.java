@@ -1,4 +1,4 @@
-package io.dodn.springboot.validation;
+package io.dodn.springboot.core.api.validation;
 
 import jakarta.validation.Constraint;
 
@@ -14,4 +14,7 @@ import static java.lang.annotation.ElementType.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = UuidValidator.class)
 public @interface IsUUID {
+    String message() default "UUID";
+    Class[] groups() default {};
+    Class[] payload() default {};
 }

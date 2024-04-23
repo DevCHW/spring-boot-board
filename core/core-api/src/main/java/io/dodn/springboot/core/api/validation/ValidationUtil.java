@@ -1,4 +1,4 @@
-package io.dodn.springboot.validation;
+package io.dodn.springboot.core.api.validation;
 
 public class ValidationUtil {
 

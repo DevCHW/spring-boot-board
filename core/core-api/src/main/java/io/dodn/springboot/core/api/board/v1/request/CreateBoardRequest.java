@@ -2,7 +2,7 @@ package io.dodn.springboot.core.api.board.v1.request;
 
 import io.dodn.springboot.core.domain.board.BoardCreateParam;
 
-public record CreateBoardRequestDto(
+public record CreateBoardRequest(
         String title,
         String content,
         Long userId

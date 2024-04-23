@@ -12,11 +12,11 @@ public abstract class BaseEntity {
 
     @CreationTimestamp
     @Column
-    private LocalDateTime createdAt;
+    protected LocalDateTime createdAt;
 
     @UpdateTimestamp
     @Column
-    private LocalDateTime updatedAt;
+    protected LocalDateTime updatedAt;
 
     public LocalDateTime getCreatedAt() {
         return createdAt;

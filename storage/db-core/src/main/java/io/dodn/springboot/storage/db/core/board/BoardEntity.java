@@ -47,6 +47,8 @@ public class BoardEntity extends BaseEntity {
                 .title(title)
                 .content(content)
                 .userId(userId)
+                .createdAt(createdAt)
+                .updatedAt(updatedAt)
                 .build();
     }
 
